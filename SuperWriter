@@ -1,0 +1,444 @@
+VERSION 5.00
+Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "COMDLG32.OCX"
+Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCTL.OCX"
+Begin VB.MDIForm SuperWriter 
+   BackColor       =   &H8000000C&
+   Caption         =   "SuperWriter 1.0"
+   ClientHeight    =   5985
+   ClientLeft      =   3570
+   ClientTop       =   2490
+   ClientWidth     =   8310
+   Icon            =   "SuperWriter.frx":0000
+   LinkTopic       =   "MDIForm1"
+   Begin MSComctlLib.StatusBar StatusBar 
+      Align           =   2  'Align Bottom
+      Height          =   375
+      Left            =   0
+      TabIndex        =   0
+      ToolTipText     =   "Show you the status"
+      Top             =   5610
+      Width           =   8310
+      _ExtentX        =   14658
+      _ExtentY        =   661
+      _Version        =   393216
+      BeginProperty Panels {8E3867A5-8586-11D1-B16A-00C0F0283628} 
+         NumPanels       =   1
+         BeginProperty Panel1 {8E3867AB-8586-11D1-B16A-00C0F0283628} 
+            Object.Width           =   2999
+            MinWidth        =   2999
+            Picture         =   "SuperWriter.frx":0442
+            Text            =   "Filstatus"
+            TextSave        =   "Filstatus"
+         EndProperty
+      EndProperty
+   End
+   Begin MSComctlLib.Toolbar Knapprad 
+      Align           =   1  'Align Top
+      Height          =   420
+      Left            =   0
+      Negotiate       =   -1  'True
+      TabIndex        =   1
+      Top             =   0
+      Width           =   8310
+      _ExtentX        =   14658
+      _ExtentY        =   741
+      ButtonWidth     =   609
+      ButtonHeight    =   582
+      Appearance      =   1
+      ImageList       =   "ImageList1"
+      _Version        =   393216
+      BeginProperty Buttons {66833FE8-8583-11D1-B16A-00C0F0283628} 
+         NumButtons      =   9
+         BeginProperty Button1 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Object.ToolTipText     =   "Nytt dokument"
+            ImageIndex      =   1
+         EndProperty
+         BeginProperty Button2 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Object.ToolTipText     =   "Öppna dokument"
+            ImageIndex      =   2
+         EndProperty
+         BeginProperty Button3 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Style           =   3
+         EndProperty
+         BeginProperty Button4 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Enabled         =   0   'False
+            Object.ToolTipText     =   "Spara"
+            ImageIndex      =   3
+         EndProperty
+         BeginProperty Button5 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Enabled         =   0   'False
+            Object.ToolTipText     =   "Skriv ut"
+            ImageIndex      =   4
+         EndProperty
+         BeginProperty Button6 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Enabled         =   0   'False
+            Style           =   3
+         EndProperty
+         BeginProperty Button7 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Enabled         =   0   'False
+            Object.ToolTipText     =   "Klipp ut"
+            ImageIndex      =   5
+         EndProperty
+         BeginProperty Button8 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Enabled         =   0   'False
+            Object.ToolTipText     =   "Kopiera"
+            ImageIndex      =   6
+         EndProperty
+         BeginProperty Button9 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Enabled         =   0   'False
+            Object.ToolTipText     =   "Klistra in"
+            ImageIndex      =   7
+         EndProperty
+      EndProperty
+   End
+   Begin MSComctlLib.ImageList ImageList1 
+      Left            =   1920
+      Top             =   1320
+      _ExtentX        =   1005
+      _ExtentY        =   1005
+      BackColor       =   -2147483648
+      ImageWidth      =   16
+      ImageHeight     =   16
+      MaskColor       =   -2147483638
+      _Version        =   393216
+      BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
+         NumListImages   =   8
+         BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "SuperWriter.frx":0562
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "SuperWriter.frx":0682
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage3 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "SuperWriter.frx":07A2
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage4 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "SuperWriter.frx":08C2
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage5 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "SuperWriter.frx":09E2
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage6 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "SuperWriter.frx":0AF6
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage7 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "SuperWriter.frx":0C0A
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage8 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "SuperWriter.frx":0D1E
+            Key             =   ""
+         EndProperty
+      EndProperty
+   End
+   Begin MSComDlg.CommonDialog CommonDialog1 
+      Left            =   960
+      Top             =   1320
+      _ExtentX        =   847
+      _ExtentY        =   847
+      _Version        =   393216
+      CancelError     =   -1  'True
+   End
+   Begin VB.Menu mnuArkiv 
+      Caption         =   "&Arkiv"
+      Begin VB.Menu mnuNytt 
+         Caption         =   "&Nytt"
+      End
+      Begin VB.Menu mnuÖppna 
+         Caption         =   "&Öppna"
+      End
+      Begin VB.Menu mnuSkilj 
+         Caption         =   "-"
+      End
+      Begin VB.Menu mnuAvsluta 
+         Caption         =   "&Avsluta"
+      End
+   End
+   Begin VB.Menu mnuTecken 
+      Caption         =   "&Tecken"
+      Begin VB.Menu mnuStorlek 
+         Caption         =   "T&eckenstorlek"
+         Begin VB.Menu mnu12 
+            Caption         =   "12"
+         End
+         Begin VB.Menu mnu14 
+            Caption         =   "14"
+         End
+         Begin VB.Menu mnu18 
+            Caption         =   "18"
+         End
+         Begin VB.Menu mnu24 
+            Caption         =   "24"
+         End
+         Begin VB.Menu mnu30 
+            Caption         =   "30"
+         End
+         Begin VB.Menu mnu48 
+            Caption         =   "48"
+         End
+      End
+      Begin VB.Menu mnuSnitt 
+         Caption         =   "Te&ckensnitt"
+      End
+   End
+   Begin VB.Menu mnufråga 
+      Caption         =   "&?"
+      Begin VB.Menu mnuOm 
+         Caption         =   "&Om SuperWriter 1.0"
+      End
+   End
+End
+Attribute VB_Name = "SuperWriter"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+
+Public Sub EditCopy()
+SuperWriter.ActiveForm.SetFocus
+SendKeys "^c", True
+End Sub
+Public Sub EditCut()
+SuperWriter.ActiveForm.SetFocus
+SendKeys "^x", True
+End Sub
+Public Sub EditPaste()
+SuperWriter.ActiveForm.SetFocus
+SendKeys "^v", True
+End Sub
+Public Sub FileOpen()
+Dim NewFile As New WordChild
+Dim sFilnamn As String
+Dim i As Integer
+  i = FreeFile
+   
+   'Aktivera felhantering
+   On Error GoTo errorhandler:
+   
+   SuperWriter.CommonDialog1.DialogTitle = "Öppna"
+   SuperWriter.CommonDialog1.CancelError = True
+   SuperWriter.CommonDialog1.Filter = "Text Format|*.*"
+   SuperWriter.CommonDialog1.ShowOpen
+   sFilnamn = SuperWriter.CommonDialog1.FileName
+
+'Läs in den utvalda filen
+Open sFilnamn For Input As i
+  NewFile.Text1.text = Input(LOF(i), i)
+  Close i
+  
+  'Ordna till det nya formuläret
+  NewFile.Caption = sFilenamn
+  NewFile.Tag = SAVED
+  SuperWriter.StatusBar.Panels(1).text = "Filstatus SAVED"
+  Exit Sub
+errorhandler:
+  If Not (Err.Number = CDCANCEL) Then MsgBox "Filen finns inte", 48, "SuperWriter"
+  Unload NewFile
+End Sub
+Public Sub FileSaveAs()
+Dim sFilnamn As String
+
+'Aktivera felhantering
+On Error GoTo Errhandler:
+
+SuperWriter.CommonDialog1.Filter = "Text Format|*.txt"
+SuperWriter.CommonDialog1.DefaultExt = ".txt"
+SuperWriter.CommonDialog1.DialogTitle = "Spara Som"
+SuperWriter.CommonDialog1.ShowSave
+sFilnamn = SuperWriter.CommonDialog1.FileName
+'Spara
+FileSave sFilnamn
+Exit Sub
+Errhandler:
+  If Not (Err.Number = CDCANCEL) Then MsgBox "Ett fel har uppstått. Filen sparades inte", 48, "Superwriter"
+End Sub
+Public Sub PrintText(text As String)
+Dim i As Integer, j As Integer, ord As String
+Dim MarginLeft As Double, MarginTop As Double
+  'Sidobestämmelser
+
+MarginLeft = 1.91
+MarginTop = 2.54
+Printer.CurrentX = MarginLeft
+Printer.CurrentY = MarginTop
+On Error GoTo errh:
+Printer.Print
+i = 1
+'Här börjar utskriften. Vi plockar ord efter ord
+'och om det senaster ordet får plats på raden skrivs
+'det ut. Annars byter skrivaren rad och skriver sen ut
+'ordet på nästa rad
+Do Until 1 > Len(text)
+'Plocka ut ett ord
+ord = ""
+ord = ord & Mid$(text, i, 1)
+i = i + 1
+Loop
+'Får det plats på raden
+If (Printer.CurrentX + Printer.TextWidth(ord)) > Printer.ScaleWidth Then
+'Om inte nästa rad matas fram
+Printer.Print
+Printer.CurrentX = MarginLeft
+End If
+'Skicka ett ord till skrivaren
+Printer.Print ord;
+'Ta hand om mellanslaget eller eventuella styrtecken mellan orden
+Do Until i > Len(text) Or Mid$(text, i, 1) > " "
+Select Case Mid$(text, i, 1)
+ Case " "     'mellanslag
+  Printer.Print " ";
+ Case Chr$(10) 'Ny rad
+  Printer.Print
+  Printer.CurrentX = MarginLeft
+ Case Chr$(9)    'Tab
+  Printer.Print Tab
+End Select
+  i = i + 1
+ Loop
+'Avsluta utskriften
+Printer.EndDoc
+Exit Sub
+errh:
+If Err = 482 Then
+  MsgBox "Kontrollera att skrivaren är ordenligt anslutan och påslagen", 48, "SuperWriter"
+End If
+Exit Sub
+End Sub
+Public Sub PrintFile()
+Dim TextArea As String
+Dim flaggor As Integer
+  'Välj skrivare
+  SuperWriter.CommonDialog1.DialogTitle = "Skriv ut"
+  SuperWriter.CommonDialog1.CancelError = True
+  flaggor = cdlPDNoPageNums
+   If SuperWriter.ActiveForm.Text1.SelLength = 0 Then
+   flaggor = flaggor + cdlPDAllPages
+   Else
+   flaggor = flaggor + cdlPDSelection
+   End If
+   SuperWriter.CommonDialog1.Flags = flaggor
+   
+   'Aktiver felhantering
+   On Error GoTo PrintErrorhandler:
+   SuperWriter.CommonDialog1.ShowPrinter
+   
+   TextArea = SuperWriter.ActiveForm.Text1.text
+   PrintText TextArea
+   Exit Sub
+   
+PrintErrorhandler:
+    If Err = CDCANCEL Then
+    Exit Sub
+    Else
+    Resume Next
+    End If
+   End Sub
+
+Public Sub FileSave(sFilnamn As String)
+Dim i As Integer
+i = FreeFile
+
+'Aktivera felhantering
+On Error GoTo Errhandler:
+
+'Pang på och spara
+Open sFilnamn For Output As i
+ Print #1, SuperWriter.ActiveForm.Text1.text
+ Close i
+ 'Uppdatera formuläret
+ SuperWriter.ActiveForm.Tag = SAVED
+ SuperWriter.ActiveForm.Caption = sFilnamn
+ SuperWriter.StatusBar.Panels(1).text = "Filstatus SAVED"
+ Exit Sub
+Errhandler:
+   MsgBox "Ett fel har uppstått. Filen sparades inte", 48, "SuperWriter"
+End Sub
+Public Sub KnappradÖppna()
+Dim i As Integer
+  For i = 3 To 9
+    Knapprad.Buttons(i).Enabled = True
+  Next i
+  If Printers.Count <= 0 Then
+  Knapprad.Buttons(5).Enabled = False
+  End If
+End Sub
+
+Public Sub NewFile()
+Dim NewDoc As New WordChild
+NewDoc.Show
+End Sub
+
+Public Sub KnappradInit()
+Dim i As Integer
+  For i = 3 To 9
+    Knapprad.Buttons(i).Enabled = False
+    Next i
+End Sub
+
+Private Sub Knapprad_ButtonClick(ByVal Button As MSComctlLib.Button)
+Select Case Button.Index
+Case 1
+    NewFile
+Case 2
+    FileOpen
+Case 4
+    If SuperWriter.ActiveForm.Caption = INITFILNAMN Then
+    FileSaveAs
+Else
+    FileSave SuperWriter.ActiveForm.Caption
+End If
+Case 5
+    PrintFile
+Case 7
+    EditCut
+Case 8
+    EditCopy
+Case 9
+    EditPaste
+End Select
+End Sub
+
+Private Sub mnuAvsluta_Click()
+End
+End Sub
+
+Private Sub mnuNytt_Click()
+NewFile
+End Sub
+
+Private Sub mnuOm_Click()
+frmOm.Show 1
+End Sub
+
+Private Sub mnuÖppna_Click()
+FileOpen
+End Sub
+
+Private Sub Toolbar1_ButtonClick(ByVal Button As MSComctlLib.Button)
+Select Case Button.Index
+  Case 1
+    NewFile
+  Case 2
+    FileOpen
+  Case 4
+    If SuperWriter.ActiveForm.Caption = INITFILNAMN Then
+    FileSaveAs
+    Else
+      FileSave SuperWriter.ActiveForm.Caption
+    End If
+  Case 5
+    Print File
+  Case 7
+    EditCut
+  Case 8
+    EditCopy
+  Case 9
+    EditPaste
+End Select
+End Sub
